@@ -1,0 +1,13 @@
+def print_rangoli(size):
+  a = "abcdefghijklmnopqrstuvwxyz"
+  l = []
+  for row in range(size):
+        print_ = "-".join(a[row:size])
+        l.append(print_[::-1] + print_[1:])
+  width = len(l[0])
+    
+  for row in range(size-1, 0, -1):
+        print(l[row].center(width, '-'))
+        
+  for row in range(size):
+        print(l[row].center(width, '-')) 
